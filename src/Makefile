@@ -1,6 +1,8 @@
-CC = g++
+CC     := g++
+LINKER := g++
+
 FLAGS = -std=c++11
-EXE = src/transform
+EXE = transform
 
 all: $(EXE)
 

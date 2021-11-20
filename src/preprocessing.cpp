@@ -36,15 +36,3 @@ Eigen::Matrix3Xd read_coordinates(FILE* fp, bool* is_ca) {
 	}
 	//return NULL;
 }
-
-
-int main() {
-	FILE* fp;
-	bool ca;
-	Eigen::Matrix3Xd coordinates(3,1);
-	fp = open_file("../data/A.pdb");
-	coordinates = read_coordinates(fp, &ca);
-	std::cout<< coordinates << std::endl;
-	close_file(fp);
-}
-
