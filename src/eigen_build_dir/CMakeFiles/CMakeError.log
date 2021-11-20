@@ -1,0 +1,139 @@
+Performing C++ SOURCE FILE Test COMPILER_SUPPORT_Wlogicalop failed with the following output:
+Change Dir: /Users/jose/Documents/GitHub/STFC/src/eigen_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_77771/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_77771.dir/build.make CMakeFiles/cmTC_77771.dir/build
+Building CXX object CMakeFiles/cmTC_77771.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DCOMPILER_SUPPORT_Wlogicalop  -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Werror -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -Wlogical-op -o CMakeFiles/cmTC_77771.dir/src.cxx.o -c /Users/jose/Documents/GitHub/STFC/src/eigen_build_dir/CMakeFiles/CMakeTmp/src.cxx
+error: unknown warning option '-Wlogical-op'; did you mean '-Wlong-long'? [-Werror,-Wunknown-warning-option]
+make[1]: *** [CMakeFiles/cmTC_77771.dir/src.cxx.o] Error 1
+make: *** [cmTC_77771/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_SUPPORT_Wnopsabi failed with the following output:
+Change Dir: /Users/jose/Documents/GitHub/STFC/src/eigen_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_916b4/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_916b4.dir/build.make CMakeFiles/cmTC_916b4.dir/build
+Building CXX object CMakeFiles/cmTC_916b4.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DCOMPILER_SUPPORT_Wnopsabi  -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Wenum-conversion -Wc++11-extensions -Wdouble-promotion -Wshadow -Werror -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -Wno-psabi -o CMakeFiles/cmTC_916b4.dir/src.cxx.o -c /Users/jose/Documents/GitHub/STFC/src/eigen_build_dir/CMakeFiles/CMakeTmp/src.cxx
+error: unknown warning option '-Wno-psabi' [-Werror,-Wunknown-warning-option]
+make[1]: *** [CMakeFiles/cmTC_916b4.dir/src.cxx.o] Error 1
+make: *** [cmTC_916b4/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_SUPPORT_wd981 failed with the following output:
+Change Dir: /Users/jose/Documents/GitHub/STFC/src/eigen_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_5e04c/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_5e04c.dir/build.make CMakeFiles/cmTC_5e04c.dir/build
+Building CXX object CMakeFiles/cmTC_5e04c.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DCOMPILER_SUPPORT_wd981  -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Wenum-conversion -Wc++11-extensions -Wdouble-promotion -Wshadow -Wno-variadic-macros -Wno-long-long -fno-check-new -fno-common -fstrict-aliasing -Werror -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -wd981 -o CMakeFiles/cmTC_5e04c.dir/src.cxx.o -c /Users/jose/Documents/GitHub/STFC/src/eigen_build_dir/CMakeFiles/CMakeTmp/src.cxx
+clang: error: unknown argument: '-wd981'
+make[1]: *** [CMakeFiles/cmTC_5e04c.dir/src.cxx.o] Error 1
+make: *** [cmTC_5e04c/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_SUPPORT_wd2304 failed with the following output:
+Change Dir: /Users/jose/Documents/GitHub/STFC/src/eigen_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_9179c/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_9179c.dir/build.make CMakeFiles/cmTC_9179c.dir/build
+Building CXX object CMakeFiles/cmTC_9179c.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DCOMPILER_SUPPORT_wd2304  -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Wenum-conversion -Wc++11-extensions -Wdouble-promotion -Wshadow -Wno-variadic-macros -Wno-long-long -fno-check-new -fno-common -fstrict-aliasing -Werror -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -wd2304 -o CMakeFiles/cmTC_9179c.dir/src.cxx.o -c /Users/jose/Documents/GitHub/STFC/src/eigen_build_dir/CMakeFiles/CMakeTmp/src.cxx
+clang: error: unknown argument: '-wd2304'
+make[1]: *** [CMakeFiles/cmTC_9179c.dir/src.cxx.o] Error 1
+make: *** [cmTC_9179c/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_SUPPORT_OPENMP failed with the following output:
+Change Dir: /Users/jose/Documents/GitHub/STFC/src/eigen_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_6cdb5/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_6cdb5.dir/build.make CMakeFiles/cmTC_6cdb5.dir/build
+Building CXX object CMakeFiles/cmTC_6cdb5.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DCOMPILER_SUPPORT_OPENMP  -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Wenum-conversion -Wc++11-extensions -Wdouble-promotion -Wshadow -Wno-variadic-macros -Wno-long-long -fno-check-new -fno-common -fstrict-aliasing  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -fopenmp -o CMakeFiles/cmTC_6cdb5.dir/src.cxx.o -c /Users/jose/Documents/GitHub/STFC/src/eigen_build_dir/CMakeFiles/CMakeTmp/src.cxx
+clang: error: unsupported option '-fopenmp'
+make[1]: *** [CMakeFiles/cmTC_6cdb5.dir/src.cxx.o] Error 1
+make: *** [cmTC_6cdb5/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Determining if the function hwloc_bitmap_free exists in the hwloc failed with the following output:
+Change Dir: /Users/jose/Documents/GitHub/STFC/src/eigen_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_ee78e/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_ee78e.dir/build.make CMakeFiles/cmTC_ee78e.dir/build
+Building C object CMakeFiles/cmTC_ee78e.dir/CheckFunctionExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=hwloc_bitmap_free -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -o CMakeFiles/cmTC_ee78e.dir/CheckFunctionExists.c.o -c /usr/local/Cellar/cmake/3.19.2/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTC_ee78e
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ee78e.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=hwloc_bitmap_free -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_ee78e.dir/CheckFunctionExists.c.o -o cmTC_ee78e  -lhwloc 
+ld: library not found for -lhwloc
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [cmTC_ee78e] Error 1
+make: *** [cmTC_ee78e/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test SCOTCH_Num_4 failed with the following compile output:
+Change Dir: /Users/jose/Documents/GitHub/STFC/src/eigen_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_782f1/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_782f1.dir/build.make CMakeFiles/cmTC_782f1.dir/build
+Building C object CMakeFiles/cmTC_782f1.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DSCOTCH_Num_4  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -o CMakeFiles/cmTC_782f1.dir/src.c.o -c /Users/jose/Documents/GitHub/STFC/src/eigen_build_dir/CMakeFiles/CMakeTmp/src.c
+/Users/jose/Documents/GitHub/STFC/src/eigen_build_dir/CMakeFiles/CMakeTmp/src.c:4:10: fatal error: 'scotch.h' file not found
+#include <scotch.h>
+         ^~~~~~~~~~
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_782f1.dir/src.c.o] Error 1
+make: *** [cmTC_782f1/fast] Error 2
+
+
+...and run output:
+
+Return value: 1
+Source file was:
+
+#include <stdio.h>
+#include <stdint.h>
+#include <scotch.h>
+int main(int argc, char **argv) {
+  if (sizeof(SCOTCH_Num) == 4)
+    return 0;
+  else
+    return 1;
+}
+
+Performing C SOURCE FILE Test SCOTCH_Num_8 failed with the following compile output:
+Change Dir: /Users/jose/Documents/GitHub/STFC/src/eigen_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_efb60/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_efb60.dir/build.make CMakeFiles/cmTC_efb60.dir/build
+Building C object CMakeFiles/cmTC_efb60.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DSCOTCH_Num_8  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -o CMakeFiles/cmTC_efb60.dir/src.c.o -c /Users/jose/Documents/GitHub/STFC/src/eigen_build_dir/CMakeFiles/CMakeTmp/src.c
+/Users/jose/Documents/GitHub/STFC/src/eigen_build_dir/CMakeFiles/CMakeTmp/src.c:4:10: fatal error: 'scotch.h' file not found
+#include <scotch.h>
+         ^~~~~~~~~~
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_efb60.dir/src.c.o] Error 1
+make: *** [cmTC_efb60/fast] Error 2
+
+
+...and run output:
+
+Return value: 1
+Source file was:
+
+#include <stdio.h>
+#include <stdint.h>
+#include <scotch.h>
+int main(int argc, char **argv) {
+  if (sizeof(SCOTCH_Num) == 8)
+    return 0;
+  else
+    return 1;
+}
+

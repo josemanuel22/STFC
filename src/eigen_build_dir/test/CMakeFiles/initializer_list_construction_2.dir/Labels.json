@@ -1,0 +1,16 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/Users/jose/Documents/GitHub/STFC/src/eigen/test/initializer_list_construction.cpp"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"BuildOfficial"
+		],
+		"name" : "initializer_list_construction_2"
+	}
+}

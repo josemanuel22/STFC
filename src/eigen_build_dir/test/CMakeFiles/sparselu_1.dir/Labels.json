@@ -1,0 +1,16 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/Users/jose/Documents/GitHub/STFC/src/eigen/test/sparselu.cpp"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"BuildOfficial"
+		],
+		"name" : "sparselu_1"
+	}
+}

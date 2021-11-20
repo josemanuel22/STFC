@@ -1,0 +1,16 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/Users/jose/Documents/GitHub/STFC/src/eigen/test/geo_alignedbox.cpp"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"BuildOfficial"
+		],
+		"name" : "geo_alignedbox_7"
+	}
+}

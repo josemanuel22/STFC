@@ -1,0 +1,16 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/Users/jose/Documents/GitHub/STFC/src/eigen/test/sparse_block.cpp"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"BuildOfficial"
+		],
+		"name" : "sparse_block_3"
+	}
+}

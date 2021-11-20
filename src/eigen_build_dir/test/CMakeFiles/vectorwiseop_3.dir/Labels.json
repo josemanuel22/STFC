@@ -1,0 +1,16 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/Users/jose/Documents/GitHub/STFC/src/eigen/test/vectorwiseop.cpp"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"BuildOfficial"
+		],
+		"name" : "vectorwiseop_3"
+	}
+}
