@@ -18,15 +18,17 @@ int main() {
 	fp_B = open_file("../data/B.pdb");
 	fp_C = fopen("../data/C.pdb", "w");
 
-	coordinates_A = read_coordinates(fp_A, &is_ca);
-	coordinates_B = read_coordinates(fp_B, &is_ca);
+	do {
+		coordinates_A = read_coordinates(fp_A, &is_ca, &is_finish);
+		coordinates_B = read_coordinates(fp_B, &is_ca, &is_finish);
+		if(is_ca == true)
+			transformation = Find3DAffineTransform(coordinates_B, coordinates_A);
 
-	if(is_ca == true)
-		transformation = Find3DAffineTransform(coordinates_B, coordinates_A);
+		coordinates_C = transformation * coordinates_A;
 
-	coordinates_C = transformation * coordinates_A;
+		writte_vector(fp_C, coordinates_A, coordinates_C);
 
-	writte_vector(fp_C, coordinates_A, coordinates_C);
+	} while(!is_finish);
 
 	close_file(fp_A);
 	close_file(fp_B);
