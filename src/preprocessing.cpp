@@ -23,15 +23,11 @@ Eigen::Matrix3Xd read_coordinates(FILE* fp, bool* is_ca) {
 	char* amino = new char[4];
 	char letter;
 	unsigned int index_1, index_2;
-	double* coordinates = new double[3];
 
 	is_ca = false;
 	if ((getline(&line, &len, fp)) != -1) {
-		sscanf(line, "%s %d %s %s %c %d %lf %lf %lf", atom, &index_1, prot, amino, &letter, &index_2, &coordinates[0], &coordinates[1], &coordinates[2]);
+		sscanf(line, "%s %d %s %s %c %d %lf %lf %lf", atom, &index_1, prot, amino, &letter, &index_2, &point(0,0), &point(1,0), &point(2,0));
 		if (strcmp(prot, "CA") == 0) *is_ca = true;
-		point(0,0) = coordinates[0];
-		point(1,0) = coordinates[1];
-		point(2,0) = coordinates[2];
 		return point;
 	}
 	//return NULL;
