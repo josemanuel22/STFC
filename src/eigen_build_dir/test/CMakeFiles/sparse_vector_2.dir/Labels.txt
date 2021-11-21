@@ -1,4 +1,0 @@
-# Target labels
- BuildOfficial
-# Source files and their labels
-/Users/jose/Documents/GitHub/STFC/src/eigen/test/sparse_vector.cpp

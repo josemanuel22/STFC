@@ -12,4 +12,6 @@ void close_file(FILE* fp);
 
 Eigen::Matrix3Xd read_coordinates(FILE* fp, bool* is_ca);
 
+void writte_vector(FILE* file_out, Eigen::Matrix3Xd matrix_A, Eigen::Matrix3Xd matrix_B);
+
 #endif
