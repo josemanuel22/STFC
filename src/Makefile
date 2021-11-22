@@ -3,19 +3,19 @@ LINKER := g++
 
 SRCDIR := src
 
-SRCFILES = preprocessing.cpp kabsch.cpp transform.cpp
-OBJFILES = preprocessing.o kabsch.o transform.o
+SRCFILES = preprocessing.cpp transform.cpp kabsch.cpp
+OBJFILES = preprocessing.o transform.o kabsch.cpp
 
-FLAGS = -
+FLAGS = -std=c++17 -g -Wall -pedantic -O3
 EXE = transform
 
 all: $(EXE)
 
 $(EXE): $(OBJFILES)
-	$(LINKER) $^ -o $@
+	$(LINKER) $(FLAGS) $^ -o $(EXE)
 
 $(OBJFILES): $(SRCFILES)
-	$(CC) $(LAGS) -c $< -o $@
+	$(CC) $(FLAGS) -c $^
 
 clean:
 	rm -f *.o

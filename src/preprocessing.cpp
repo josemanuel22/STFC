@@ -1,7 +1,14 @@
 #include "preprocessing.h"
 
 
-FILE* open_file(char* file_name) {
+FILE* open_file_for_read(char* file_name) {
+	FILE* fp = fopen(file_name, "r");
+	if (fp == NULL)
+	    exit(EXIT_FAILURE);
+	return fp;
+}
+
+FILE* open_file_for_write(char* file_name) {
 	FILE* fp = fopen(file_name, "r");
 	if (fp == NULL)
 	    exit(EXIT_FAILURE);
@@ -19,7 +26,7 @@ Eigen::Matrix3Xd read_coordinates(FILE* fp, bool* is_ca,  bool* is_finish) {
 	char* line = NULL;
 	size_t len = 0;
 	char* atom = new char[5]; 
-	char* prot = new char[5];
+	char* prot = new char[4];
 	char* amino = new char[4];
 	char letter;
 	unsigned int index_1, index_2;
@@ -32,8 +39,7 @@ Eigen::Matrix3Xd read_coordinates(FILE* fp, bool* is_ca,  bool* is_finish) {
 		*is_finish = false;
 		return point;
 	}
-
-	//return NULL;
+	return point;
 }
 
 void writte_vector(FILE* file_out, Eigen::Matrix3Xd matrix_A, Eigen::Matrix3Xd matrix_B) {

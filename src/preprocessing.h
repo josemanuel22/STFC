@@ -6,7 +6,9 @@
 #include <stdlib.h>
 #include <Eigen/Geometry>
 
-FILE* open_file(char* file_name);
+FILE* open_file_for_read(char* file_name);
+
+FILE* open_file_for_write(char* file_name);
 
 void close_file(FILE* fp);
 
