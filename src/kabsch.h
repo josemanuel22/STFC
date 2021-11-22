@@ -2,10 +2,10 @@
 #define KABSCH_H
 
 //disable Wimplicit-int-float-conversion
-#if defined(__clang__)
-    #pragma clang diagnostic push
-    #pragma clang diagnostic ignored "-Wunknown-warning-option"
-#endif
+//#if defined(__clang__)
+//    #pragma clang diagnostic push
+//    #pragma clang diagnostic ignored "-Wunknown-warning-option"
+//#endif
 
 #include <Eigen/Geometry>
 

@@ -9,7 +9,7 @@ FILE* open_file_for_read(char* file_name) {
 }
 
 FILE* open_file_for_write(char* file_name) {
-	FILE* fp = fopen(file_name, "r");
+	FILE* fp = fopen(file_name, "w");
 	if (fp == NULL)
 	    exit(EXIT_FAILURE);
 	return fp;
@@ -43,7 +43,7 @@ Eigen::Matrix3Xd read_coordinates(FILE* fp, bool* is_ca,  bool* is_finish) {
 }
 
 void writte_vector(FILE* file_out, Eigen::Matrix3Xd matrix_A, Eigen::Matrix3Xd matrix_B) {
-	fprintf(file_out, "%lf %lf %lf %lf %lf %lf\n", matrix_A(0,0), matrix_A(1,0), matrix_A(2,0), matrix_B(0,0), matrix_B(1,0), matrix_B(2,0));
+	fprintf(file_out, "%.3lf %.3lf %.3lf %.3lf %.3lf %.3lf\n", matrix_A(0,0), matrix_A(1,0), matrix_A(2,0), matrix_B(0,0), matrix_B(1,0), matrix_B(2,0));
 	return;
 }
 

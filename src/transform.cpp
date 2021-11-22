@@ -18,11 +18,11 @@ int main() {
 	fp_A = open_file_for_read("../data/A.pdb");
 	fp_B = open_file_for_read("../data/B.pdb");
 	fp_C = open_file_for_write("../data/C.pdb");
-
+	
 	while(!is_finish_1 && !is_finish_2) {
 		coordinates_A = read_coordinates(fp_A, &is_ca, &is_finish_1);
 		coordinates_B = read_coordinates(fp_B, &is_ca, &is_finish_2);
-		if(!is_finish_1 && !is_finish_2) break;
+		if(is_finish_1 || is_finish_2) break;
 		if(is_ca == true)
 			transformation = Find3DAffineTransform(coordinates_B, coordinates_A);
 		coordinates_C = transformation * coordinates_A;
