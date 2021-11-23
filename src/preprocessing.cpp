@@ -28,16 +28,23 @@ void close_file(FILE* fp) {
 	fclose(fp);
 }
 
+/**
+ * Read the coordinates of the next atom in the file. 
+ * Indicates if it is a CA atom and if the file was terminated.
+ * @param fp the pointer to the file to read
+ * @param is_ca boolean that indicates if the atom is type ca or not
+ * @param is_finish boolean that indicates ig we reach the end of the file
+ */
 Eigen::Matrix3Xd read_coordinates(FILE* fp, bool* is_ca,  bool* is_finish) {
 
 	Eigen::Matrix3Xd point(3, 1);
 
+	char letter;
 	char* line = NULL;
-	size_t len = 0;
 	char* atom = new char[5]; 
 	char* prot = new char[4];
 	char* amino = new char[4];
-	char letter;
+	size_t len = 0;
 	unsigned int index_1, index_2;
 
 	*is_ca = false;
@@ -51,6 +58,12 @@ Eigen::Matrix3Xd read_coordinates(FILE* fp, bool* is_ca,  bool* is_finish) {
 	return point;
 }
 
+/**
+ * Writes the coordinates of the vectors in a file-
+ * @param fp the pointer to the file to write
+ * @param matrix_A the first vector 
+ * @param matrix_B the second vector 
+ */
 void writte_vector(FILE* file_out, Eigen::Matrix3Xd matrix_A, Eigen::Matrix3Xd matrix_B) {
 	fprintf(file_out, "%.3lf %.3lf %.3lf %.3lf %.3lf %.3lf\n", matrix_A(0,0), matrix_A(1,0), matrix_A(2,0), matrix_B(0,0), matrix_B(1,0), matrix_B(2,0));
 	return;
