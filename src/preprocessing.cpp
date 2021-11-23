@@ -1,5 +1,14 @@
 #include "preprocessing.h"
 
+/**
+ * For performance purposes we use the C routines. You can see in this link an analysis 
+ + of its performance for the treatment of large files.
+ * https://stackoverflow.com/questions/7868936/read-file-line-by-line-using-ifstream-in-c
+ *
+ * For the matrix calculation we use the library developed at INRIA Eigen.
+ + To this day, it is still the standard for this type of operation.
+ * https://eigen.tuxfamily.org/index.php?title=Main_Page
+ */
 
 FILE* open_file_for_read(char* file_name) {
 	FILE* fp = fopen(file_name, "r");

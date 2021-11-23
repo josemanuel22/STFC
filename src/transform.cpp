@@ -25,9 +25,11 @@ int main() {
 		if(is_finish_1 || is_finish_2) break;
 		if(is_ca == true)
 			transformation = Find3DAffineTransform(coordinates_B, coordinates_A);
-		coordinates_C = transformation * coordinates_A;
+		coordinates_C = transformation * coordinates_B;
 		writte_vector(fp_C, coordinates_A, coordinates_C);
+		std::cout << RMSD(coordinates_A, coordinates_C) << std::endl;
 	}
+
 	close_file(fp_A);
 	close_file(fp_B);
 	close_file(fp_C);
