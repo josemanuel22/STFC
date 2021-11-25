@@ -36,4 +36,5 @@ transform.dSYM
 *.exe
 *.out
 *.app
-
+transform
+test
