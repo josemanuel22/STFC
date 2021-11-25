@@ -5,13 +5,13 @@ SRCDIR := src
 
 TESTDIR := test
 
-SRCFILES = preprocessing.cpp transform.cpp kabsch.cpp
-OBJFILES = preprocessing.o transform.o kabsch.o
+SRCFILES = ../src/preprocessing.cpp ../src/kabsch.cpp  test.cpp
+OBJFILES = preprocessing.o kabsch.o test.o
 
 FLAGS = -std=c++17 -g -Wall -pedantic -O3
-EXE = transform
+EXE = test
 
-all: $(EXE)
+test: $(EXE)
 
 $(EXE): $(OBJFILES)
 	$(LINKER) $(FLAGS) $^ -o $(EXE)
@@ -24,4 +24,3 @@ test:
 clean:
 	rm -f *.o
 	rm -f $(EXE)
-
