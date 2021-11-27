@@ -25,3 +25,6 @@ make clean
 make test
 ./test
 ```
+# Note
+
+When the `eigen` library compiles it prints a series of warnings due to conflicts because we compile using the `std c++ 11`. I prefer not to silence these warnings but I don't think it convenient to use a standard lower than `c++ 11`.
