@@ -6,6 +6,8 @@ The `.cpp` are found in `src` directory. Here we can find the following files: `
 
 `transform.cpp` In this file is the main, where the transformation is applied and then the results are written.
 
+In the Std output we print root-mean-square deviation of the atomic positions. The calculation is implemented in `kabash.h`
+
 # Execution
 
 To compile and run (in the `src` directory):
