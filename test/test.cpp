@@ -22,11 +22,12 @@ int main() {
 	fp_A = open_file_for_read("A.pdb");
 	fp_B = open_file_for_read("B.pdb");
 
+    //check if the affine transform work. If not an expection is threw.
+    TestFind3DAffineTransform();
+
 	coordinates_A = read_coordinates(fp_A, &is_ca, &is_finish_1);
 	coordinates_B = read_coordinates(fp_B, &is_ca, &is_finish_2);
-	if(is_ca == true) {
-		transformation = Find3DAffineTransform(coordinates_B, coordinates_A);
-    }
+	transformation = Find3DAffineTransform(coordinates_B, coordinates_A);
 
 	coordinates_C = transformation * coordinates_B;
 
@@ -38,9 +39,9 @@ int main() {
     assert(coordinates_B(1,0) == 18.765);
     assert(coordinates_B(2,0) == 22.708);
 
-    assert(coordinates_C(0,0) == 0.000);
-    assert(coordinates_C(1,0) == 0.000);
-    assert(coordinates_C(2,0) == 0.000);
+    assert(coordinates_C(0,0) == 13.414);
+    assert(coordinates_C(1,0) == 18.765);
+    assert(coordinates_C(2,0) == 22.708);
 
     coordinates_A = read_coordinates(fp_A, &is_ca, &is_finish_1);
 	coordinates_B = read_coordinates(fp_B, &is_ca, &is_finish_2);
@@ -54,8 +55,6 @@ int main() {
     assert(coordinates_B(0,0) == 13.558);
     assert(coordinates_B(1,0) == 17.258);
     assert(coordinates_B(2,0) == 21.908);
-
-    std::cout << transformation.matrix() << std::endl;
 
     assert(coordinates_C(0,0) == 13.558);
     assert(coordinates_C(1,0) == 17.258);
@@ -77,7 +76,6 @@ int main() {
     assert(coordinates_C(0,0) == 15.269);
     assert(coordinates_C(1,0) == 17.623);
     assert(coordinates_C(2,0) == 21.249);
-
 
 	close_file(fp_A);
 	close_file(fp_B);

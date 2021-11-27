@@ -9,7 +9,7 @@ int main() {
 	Eigen::Matrix3Xd coordinates_A;
 	Eigen::Matrix3Xd coordinates_B;
 	Eigen::Matrix3Xd coordinates_C;
-	Eigen::Affine3d transformation;
+	Eigen::Affine3d transformation = Eigen::Affine3d::Identity(); //if the atom is not a CA we use the identity transform until a CA atom is found
 
 	bool is_ca;
 	bool is_finish_1 = false;

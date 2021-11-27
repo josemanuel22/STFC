@@ -15,4 +15,6 @@
 
 Eigen::Affine3d Find3DAffineTransform(Eigen::Matrix3Xd in, Eigen::Matrix3Xd out);
 
+void TestFind3DAffineTransform();
+
 #endif
