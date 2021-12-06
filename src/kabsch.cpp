@@ -1,6 +1,10 @@
 // This code is released in public domain
 #include "kabsch.h"
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <iostream>
+
 // Given two sets of 3D points, find the rotation + translation + scale
 // which best maps the first set to the second.
 // Source: http://en.wikipedia.org/wiki/Kabsch_algorithm
@@ -23,8 +27,9 @@ Eigen::Affine3d Find3DAffineTransform(Eigen::Matrix3Xd in, Eigen::Matrix3Xd out)
     dist_in  += (in.col(col+1) - in.col(col)).norm();
     dist_out += (out.col(col+1) - out.col(col)).norm();
   }
-  if (dist_in <= 0 || dist_out <= 0)
+  if (dist_in <= 0 || dist_out <= 0) {
     return A;
+  }
   double scale = dist_out/dist_in;
   out /= scale;
 

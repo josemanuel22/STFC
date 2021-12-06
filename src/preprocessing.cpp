@@ -35,7 +35,8 @@ void close_file(FILE* fp) {
  * @param is_ca boolean that indicates if the atom is type ca or not
  * @param is_finish boolean that indicates ig we reach the end of the file
  */
-Eigen::Matrix3Xd read_coordinates(FILE* fp, bool* is_ca,  bool* is_finish) {
+int num_atom = 0;
+Eigen::Matrix3Xd read_coordinates(FILE* fp, bool* is_ca,  bool* is_finish, bool* change_atom) {
 
 	Eigen::Matrix3Xd point(3, 1);
 
@@ -49,8 +50,13 @@ Eigen::Matrix3Xd read_coordinates(FILE* fp, bool* is_ca,  bool* is_finish) {
 
 	*is_ca = false;
 	*is_finish = true;
+	*change_atom = false;
 	if (getline(&line, &len, fp) != -1) {
 		sscanf(line, "%s %d %s %s %c %d %lf %lf %lf", atom, &index_1, prot, amino, &letter, &index_2, &point(0,0), &point(1,0), &point(2,0));
+		if ( num_atom != index_2) {
+			num_atom = index_2;
+			*change_atom = true;
+		}
 		if (strncmp(prot, "CA", 2) == 0) *is_ca = true;
 		*is_finish = false;
 		return point;
@@ -64,8 +70,27 @@ Eigen::Matrix3Xd read_coordinates(FILE* fp, bool* is_ca,  bool* is_finish) {
  * @param matrix_A the first vector 
  * @param matrix_B the second vector 
  */
-void writte_vector(FILE* file_out, Eigen::Matrix3Xd matrix_A, Eigen::Matrix3Xd matrix_B) {
-	fprintf(file_out, "%.3lf %.3lf %.3lf %.3lf %.3lf %.3lf\n", matrix_A(0,0), matrix_A(1,0), matrix_A(2,0), matrix_B(0,0), matrix_B(1,0), matrix_B(2,0));
+void writte_vector(FILE* file_A, FILE* file_B, FILE* file_out, Eigen::Matrix3Xd matrix_A, Eigen::Matrix3Xd matrix_B) {
+
+	Eigen::Matrix3Xd point(3, 1);
+
+	char letter_1;
+	char* line = NULL;
+	char* atom = new char[5]; 
+	char* prot = new char[5];
+	char* amino = new char[4];
+	size_t len = 0;
+	unsigned int index_1, index_2;
+	double val_1, val_2;
+	char letter_2, letter_3;
+	if (getline(&line, &len, file_A) != -1) {
+		sscanf(line, "%s\t%d\t%s\t%s\t%c\t%d\t%lf\t%lf\t%lf\t%lf\t%lf\t%c\t%c", atom, &index_1, prot, amino, &letter_1, &index_2, &point(0,0), &point(1,0), &point(2,0), &val_1, &val_2, &letter_2, &letter_3);
+		fprintf(file_out, "%s\t%d\t%s\t%s\t%c\t%d\t%.3lf\t%.3lf\t%.3lf\t%.2lf\t%.2lf\t%c\t%c ", atom, index_1, prot, amino, letter_1, index_2, matrix_A(0,0), matrix_A(1,0), matrix_A(2,0), val_1, val_2, letter_2, letter_3);
+	}
+	if (getline(&line, &len, file_B) != -1) {
+		sscanf(line, "%s\t%d\t%s\t%s\t%c\t%d\t%lf\t%lf\t%lf\t%lf\t%lf\t%c\t%c", atom, &index_1, prot, amino, &letter_1, &index_2, &point(0,0), &point(1,0), &point(2,0), &val_1, &val_2, &letter_2, &letter_3);
+		fprintf(file_out, "%s\t%d\t%s\t%s\t%c\t%d\t%.3lf\t%.3lf\t%.3lf\t%.2lf\t%.2lf\t%c\t%c\n", atom, index_1, prot, amino, letter_1, index_2, matrix_B(0,0), matrix_B(1,0), matrix_B(2,0), val_1, val_2, letter_2, letter_3);
+	}
 	return;
 }
 

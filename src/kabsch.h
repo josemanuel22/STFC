@@ -11,10 +11,8 @@
 #include <math.h>
 
 /*root-mean-square deviation of atomic positions*/
-#define RMSD(A,B) sqrt( 1/3 * (A(0,0)-B(0,0)) * (A(0,0)-B(0,0)) + (A(1,0)-B(1,0)) * (A(1,0)-B(1,0)) + (A(1,0)-B(1,0)) * (A(1,0)-B(1,0)) )
+#define DISTANCE(A,B) ((A(0,0)-B(0,0)) * (A(0,0)-B(0,0)) + (A(1,0)-B(1,0)) * (A(1,0)-B(1,0)) + (A(1,0)-B(1,0)) * (A(1,0)-B(1,0)))
 
 Eigen::Affine3d Find3DAffineTransform(Eigen::Matrix3Xd in, Eigen::Matrix3Xd out);
-
-void TestFind3DAffineTransform();
 
 #endif
